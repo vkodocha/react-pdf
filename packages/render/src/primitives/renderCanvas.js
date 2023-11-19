@@ -49,6 +49,12 @@ const painter = ctx => {
     {},
   );
 
+  p = { 
+    ...p, 
+    widthOfString: (string, options) => ctx['widthOfString'].apply(ctx, [string, options]),
+    heightOfString: (string, options) => ctx['heightOfString'].apply(ctx, [string, options]),
+  };
+
   return p;
 };
 
